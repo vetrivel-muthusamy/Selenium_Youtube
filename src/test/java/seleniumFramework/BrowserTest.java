@@ -1,7 +1,10 @@
 package seleniumFramework;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserTest {
 	
@@ -18,6 +21,15 @@ public class BrowserTest {
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://mvnrepository.com/artifact/junit/junit/4.13.2");
 		driver.quit();
+		
+        WebDriverManager.chromedriver().setup();
+        
+		WebDriver Cdriver = new ChromeDriver();
+		Cdriver.get("https://mvnrepository.com/artifact/junit/junit/4.13.2");
+		Cdriver.quit();
+
+
+
 	
 	}
 
